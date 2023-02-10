@@ -1,7 +1,7 @@
 import logging
 import torch
 from datasets import load_metric
-from tqdm.auto import tqdm
+from tqdm.auto import tqdm #进度条
 import copy
 
 def evaluation(model, config):

@@ -1,4 +1,5 @@
-from datasets import load_dataset, GenerateMode
+# from datasets import load_dataset, GenerateMode
+from datasets import load_dataset, DownloadMode
 from transformers import AutoTokenizer, BertTokenizer, DataCollatorWithPadding
 from torch.utils.data import DataLoader
 
@@ -9,7 +10,7 @@ class Dataset:
 
 def load_dataset_for_transformer(config):
     # data loader
-    raw_datasets = load_dataset(config.dataset_script, download_mode=GenerateMode.FORCE_REDOWNLOAD)
+    raw_datasets = load_dataset(config.dataset_script, download_mode=DownloadMode.FORCE_REDOWNLOAD)
     # raw_datasets = load_dataset(config.dataset_script)
 
     tokenizer = AutoTokenizer.from_pretrained(config.model_name)

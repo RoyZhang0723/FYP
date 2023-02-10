@@ -34,7 +34,8 @@ None
 # Openrice
 
 _URLs = {
-    "Openrice": r"../Dataset"
+    "Openrice": r"../dataset"
+    # "Openrice": r"../Dataset"
 }
 
 

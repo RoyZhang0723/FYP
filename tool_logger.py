@@ -31,7 +31,8 @@ class logger:
                 with open(LOG_FILE, 'w') as f:
                     pass
 
-        logging = logging.getlogging()
+        # logging = logging.getlogging()
+        Logging = logging.getlogging()
         logging.basicConfig(filename=LOG_FILE,
                             format='%(asctime)s - %(levelname)s - %(name)s - %(funcName)s - %(message)s',
                             datefmt='%m/%d/%Y %H:%M:%S')
@@ -41,4 +42,4 @@ class logger:
         # ch = logging.StreamHandler()
         # logging.addHandler(ch)
 
-        return logging
+        return Logging
